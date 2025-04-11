@@ -59,7 +59,7 @@ export default function NewScreen() {
     }
 
     const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      // mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
       aspect: [1, 1],
       quality: 1,
@@ -80,7 +80,7 @@ export default function NewScreen() {
         activeOpacity={0.8}
         style={styles.centered}
       >
-        <PlantlyImage />
+        <PlantlyImage imgUri={imageUri} />
       </TouchableOpacity>
       <Text style={styles.label}>Name</Text>
       <TextInput

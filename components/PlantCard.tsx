@@ -6,18 +6,18 @@ import { Link } from "expo-router";
 
 export function PlantCard({ plant }: { plant: PlantType }) {
   return (
-    <Link href="">
-        <Pressable style={styles.plantCard}>
-      <PlantlyImage size={100} imgUri={plant.imageUri} />
-      <View style={styles.details}>
-        <Text numberOfLines={1} style={styles.plantName}>
-          {plant.name}
-        </Text>
-        <Text style={styles.subtitle}>
-          Water every {plant.wateringFrequencyDays} days
-        </Text>
-      </View>
-    </Pressable>
+    <Link href={`/plants/${plant.id}`} asChild>
+      <Pressable style={styles.plantCard}>
+        <PlantlyImage size={100} imgUri={plant.imageUri} />
+        <View style={styles.details}>
+          <Text numberOfLines={1} style={styles.plantName}>
+            {plant.name}
+          </Text>
+          <Text style={styles.subtitle}>
+            Water every {plant.wateringFrequencyDays} days
+          </Text>
+        </View>
+      </Pressable>
     </Link>
   );
 }
