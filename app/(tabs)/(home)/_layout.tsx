@@ -4,6 +4,10 @@ import { Stack } from "expo-router";
 import { Link } from "expo-router";
 import { Pressable } from "react-native";
 
+export const unstable_settings = {
+  initialRouteName: "index",
+};
+
 export default function layout() {
   return (
     <Stack>
